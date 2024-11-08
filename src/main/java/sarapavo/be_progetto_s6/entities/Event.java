@@ -16,7 +16,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class Event {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue
     @Setter(AccessLevel.NONE)
     private Long id;
     private String title;
@@ -26,11 +26,11 @@ public class Event {
     private int numberOfPeople;
 
     @ManyToOne
-    @JoinColumn(name = "organizerId")
-    private User user;
+    @JoinColumn(name = "organizer_id")
+    private User organizer;
 
-    public Event(User user, int numberOfPeople, String location, Date date, String description, String title) {
-        this.user = user;
+    public Event(User organizer, int numberOfPeople, String location, Date date, String description, String title) {
+        this.organizer = organizer;
         this.numberOfPeople = numberOfPeople;
         this.location = location;
         this.date = date;
@@ -47,7 +47,7 @@ public class Event {
                 ", date=" + date +
                 ", location='" + location + '\'' +
                 ", numberOfPeople=" + numberOfPeople +
-                ", user=" + user +
+                ", user=" + +
                 '}';
     }
 }

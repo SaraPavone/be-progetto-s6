@@ -6,7 +6,7 @@ import org.springframework.security.authorization.AuthorizationDeniedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import sarapavo.be_progetto_s6.entities.payloads.ErrorsResponseDTO;
+import sarapavo.be_progetto_s6.payloads.ErrorsResponseDTO;
 
 import java.time.LocalDateTime;
 

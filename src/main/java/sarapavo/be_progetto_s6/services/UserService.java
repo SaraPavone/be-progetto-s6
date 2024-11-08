@@ -37,5 +37,9 @@ public class UserService {
         return this.usersRepository.findByEmail(email).orElseThrow(() -> new NotFoundException("L'utente con email " + email + " non è stato trovato"));
     }
 
+    public User findById(Long id) {
+        return this.usersRepository.findById(id).orElseThrow(() -> new NotFoundException("L'utente con id " + id + " non è stato trovato"));
+    }
+
 
 }
